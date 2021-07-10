@@ -1,25 +1,25 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-frontend/node_modules
-frontend/.pnp
-frontend/.pnp.js
+GUI/node_modules
+GUI/.pnp
+GUI/.pnp.js
 
 # testing
-frontend/coverage
+GUI/coverage
 
 # production
-frontend/build
+GUI/build
 
 # misc
-frontend/.DS_Store
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend.env.production.local
+GUI/.DS_Store
+GUI/.env.local
+GUI/.env.development.local
+GUI/.env.test.local
+GUI/.env.production.local
 
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
+GUI/npm-debug.log*
+GUI/yarn-debug.log*
+GUI/yarn-error.log*
 
 Java Brains Course API/.idea/
