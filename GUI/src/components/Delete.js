@@ -16,13 +16,15 @@ class Delete extends Component {
     }
 
     submitHandler = e => {
-        if (window.confirm('Are you sure?')) {
+        if (window.confirm('Delete Vehicle having License Plate Number - '+this.state.licensePlate+'?')) {
             e.preventDefault()
             axios.delete('http://localhost:8080/vehicles/'+this.state.licensePlate)
                 .then(() => console.log('deleted successfully'))
             .catch(error => {
                 console.log(error)
             })
+
+            this.setState({licensePlate:'done'})
         }
     }
 
@@ -36,7 +38,7 @@ class Delete extends Component {
 
             <form onSubmit={this.submitHandler}>
             License Plate Number: <input type="text" name="licensePlate" value={licensePlate} onChange={this.changeHandler}></input> <br/> <br/>
-            <button type="submit"> Delete Vehicle </button>
+            <button type="submit"> Delete Vehicle </button> { this.state.licensePlate=="done" ? <span> Vehicle Deleted Successfully! </span>: null}
             </form>
         </div>
     )

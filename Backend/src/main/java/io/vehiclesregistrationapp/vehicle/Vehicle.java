@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 public class Vehicle {
 
     @Id
-    private String licensePlate;
+    private String licensePlate;   //acts as a primary key since it is unique to each vehicle
     private String vehicleForm;
     private String color;
     private String brand;
@@ -60,6 +60,7 @@ public class Vehicle {
         return vehicleForm;
     }
 
+    // function which determines the form of the license plate of the vehicle (task 1)
     public void setVehicleForm() {
 
         //checks if license plate is old

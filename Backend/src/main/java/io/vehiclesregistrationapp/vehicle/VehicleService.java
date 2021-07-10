@@ -13,13 +13,7 @@ public class VehicleService {
     @Autowired
     private VehicleRepository vehicleRepository;
 
-//    public List<Vehicle> getVehicles(String userId) {
-//        List<Vehicle> vehicles = new ArrayList<>();
-//        vehicleRepository.findById(userId)
-//                .forEach(vehicles::add);
-//        return vehicles;
-//    }
-
+    // returns all stored vehicles
     public List<Vehicle> getAllVehicles() {
         List<Vehicle> vehicles = new ArrayList<>();
         vehicleRepository.findAll()
@@ -27,19 +21,23 @@ public class VehicleService {
         return vehicles;
     }
 
+    // adds vehicle into storage
     public void addVehicle(Vehicle vehicle) {
         vehicle.setVehicleForm();
         vehicleRepository.save(vehicle);
     }
 
+    // updates vehicle and stores updated info
     public void updateVehicle(Vehicle vehicle) {
         vehicleRepository.save(vehicle);
     }
 
+    // deletes vehicle from storage
     public void deleteVehicle(String id) {
         vehicleRepository.deleteById(id);
     }
 
+    // returns vehicle having the passed id (license plate number)
     public Optional<Vehicle> getVehicle(String id) {
         return vehicleRepository.findById(id);
     }
