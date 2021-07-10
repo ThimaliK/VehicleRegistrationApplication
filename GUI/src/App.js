@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Menu from './Menu'
-import View  from './View'
-import Edit from './Edit'
-import Delete from './Delete'
-import Register from './Register'
+
+import View  from './components/View'
+import Edit from './components/Edit'
+import Delete from './components/Delete'
+import Register from './components/Register'
+
 import { BrowserRouter as Router, Route, Switch, Link } from  'react-router-dom'
 
 function App() {
