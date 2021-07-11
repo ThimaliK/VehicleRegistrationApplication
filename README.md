@@ -3,8 +3,8 @@
 ### Running the Frontend
 
 Requirements
--NodeJS
--NPM
+- NodeJS
+- NPM
 
 Move to the Frontend directory and run the following commands.
 - npm install axios
