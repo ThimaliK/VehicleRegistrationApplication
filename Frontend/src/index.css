@@ -14,9 +14,9 @@ code {
 
 .menuButton {
   margin: 1%;
-  padding : 1%;
+  /* padding : 1%; */
   font-weight: 700;
-  color: black;
+  /* color: black; */
 }
 
 .menuLink {
@@ -24,6 +24,13 @@ code {
   font-weight: 700;
   color: black;
   padding: auto;
+}
+
+button{
+  color:white;
+  background-color: black;
+  padding: 1%;
+  border-style: none;
 }
 
 button:hover {

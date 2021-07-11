@@ -19,8 +19,8 @@ function App() {
         <div style={{textAlign: "center"}}>
         <Link className="menuLink" to="/register"><button className="menuButton">  Register New Vehicle </button>  </Link>
         <Link className="menuLink"to="/view"> <button className="menuButton">  View Registered Vehicles  </button> </Link>
-        <Link className="menuLink"to="/edit"> <button className="menuButton">  Edit registered Vehicle </button></Link>
-        <Link className="menuLink" to="/delete"><button className="menuButton">  Delete registered Vehicle  </button></Link><br/> <br/> 
+        <Link className="menuLink"to="/edit"> <button className="menuButton">  Edit Registered Vehicle </button></Link>
+        <Link className="menuLink" to="/delete"><button className="menuButton">  Delete Registered Vehicle  </button></Link><br/> <br/> 
         </div>
 
       <Switch>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+
 const initialState = {
     licensePlate: '',
     vehicleForm: '',
@@ -9,9 +10,9 @@ const initialState = {
     type: ''
 }
 
-var error = false
+//todo
+// var error = false
 
-const finalState = 'registered'
 
 class Register extends Component {
 
@@ -22,6 +23,7 @@ class Register extends Component {
         this.state = initialState
     }
 
+      //todo
     //function to validate license plate number (task 2)
     validate() {
     
@@ -30,20 +32,22 @@ class Register extends Component {
     changeHandler = e => {
         this.setState({[e.target.name]: e.target.value})
         
-        if(this.state.licensePlate.length<6) {
-            console.log(this.state.licensePlate)
-            error = true
-        } else {
-            error = false
-        }
+        //todo
+        // if(this.state.licensePlate.length<6) {
+        //     console.log(this.state.licensePlate)
+        //     error = true
+        // } else {
+        //     error = false
+        // }
         
     }
 
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-
-        if(!error) {
+        
+        //todo
+        //if(!error) {
 
             axios.post('http://localhost:8080/vehicles', this.state)
             .then(response => {
@@ -54,9 +58,10 @@ class Register extends Component {
                 console.log(error)
             })
 
-            this.setState({licensePlate: "done"})
+            this.setState(initialState)
+            this.setState({licensePlate: "   "})
             
-        } 
+        //} 
 
         
     }
@@ -72,13 +77,17 @@ class Register extends Component {
 
             <form style={{textAlign: "left"}} onSubmit={this.submitHandler}>
 
-            Licence Plate Number: <input type="text" name="licensePlate" value={licensePlate} onChange={this.changeHandler}/> { error ? <span> Invalid License Plate Number... </span> : null }  
+            Licence Plate Number: <input type="text" name="licensePlate" value={licensePlate} onChange={this.changeHandler}/> 
+
+            {/* todo */}
+            {/* { error ? <span> Invalid License Plate Number... </span> : null }   */}
+
              <br/> <br/>
 
             Vehicle Color: <input type="text" name="color" value={color} onChange={this.changeHandler}/> <br/> <br/>
             Vehicle Brand: <input type="text" name="brand" value={brand} onChange={this.changeHandler}/> <br/> <br/>
             Vehicle Type: <input type="text" name="type" value={type} onChange={this.changeHandler}/> <br/> <br/>
-            <button type="submit"> Register Vehicle </button>  { this.state.licensePlate=="done" ? <span> Vehicle Successfully Registered! </span>: null}
+            <button type="submit"> Register Vehicle </button>  { licensePlate=="   " ? <span> Vehicle Successfully Registered! </span> : null}
             
             </form>
 

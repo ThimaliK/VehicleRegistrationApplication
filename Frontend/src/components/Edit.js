@@ -60,27 +60,30 @@ class Edit extends Component {
     const { licensePlate, vehicle } = this.state
 
     return (
-        <div style={{textAlign: "center"}}>
-            <h3> Edit Vehicle </h3>
+        <div style={{textAlign: "center", paddingLeft:"35%"}}>
+            <h3 style={{textAlign: "left"}}> Edit Vehicle </h3>
 
-            <form onSubmit={this.selectVehicle}>
+            <form style={{textAlign: "left"}} onSubmit={this.selectVehicle}>
             Enter the License Plate Number to find the Vehicle: <input type="text" name="licensePlate" value={licensePlate} onChange={this.changeHandler}></input> <br/> <br/>
             <button type="submit"> Find Vehicle </button>
             </form>
 
-            <div>
+            <div style={{textAlign: "center"}}>
             {
                     vehicle.length!=0 ?
-                    <div style={{textAlign: "center", paddingLeft:"35%"}}> 
-                        <h4 style={{textAlign: "left"}}> Vehicle to be edited: </h4>
+                    <div style={{textAlign: "left"}}> 
+                        <h4> Vehicle to be edited: </h4>
 
-                        <div style={{textAlign: "left"}}> License Plate Number: {vehicle.licensePlate} </div>
-                        <div style={{textAlign: "left"}}> Vehicle Form: {vehicle.vehicleForm} </div>
+                        <div> (Edit any/all necessary field(s)) </div> <br/> <br/>
+
+                        <div> License Plate Number: {vehicle.licensePlate} </div>
+                        <div> Vehicle Form: {vehicle.vehicleForm} </div>
+
                         <form onSubmit={this.confirmEdit}>
-                        <div style={{textAlign: "left"}}> Vehicle Color: {vehicle.color} | Change color to: <input type="text" name="color" onChange={this.editData}></input></div>
-                        <div style={{textAlign: "left"}}> Vehicle Type: {vehicle.type} | Change type to: <input type="text" name="type" onChange={this.editData}></input> </div>
-                        <div style={{textAlign: "left"}}> Vehicle Brand: {vehicle.brand} | Change brand to: <input type="text" name="brand" onChange={this.editData}></input></div> <br/>
-                        <div style={{textAlign: "left"}}><button type="submit"> Edit Vehicle </button></div>
+                        <div> Vehicle Color: {vehicle.color} | Change color to: <input type="text" name="color" onChange={this.editData}></input></div>
+                        <div> Vehicle Type: {vehicle.type} | Change type to: <input type="text" name="type" onChange={this.editData}></input> </div>
+                        <div> Vehicle Brand: {vehicle.brand} | Change brand to: <input type="text" name="brand" onChange={this.editData}></input></div> <br/>
+                        <div> <button type="submit"> Edit Vehicle </button> </div>
                         </form>
                     </div> :
                     null

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+
 class Delete extends Component {
 
     constructor(props) {
@@ -24,7 +25,7 @@ class Delete extends Component {
                 console.log(error)
             })
 
-            this.setState({licensePlate:'done'})
+            this.setState({licensePlate:"   "})
         }
     }
 
@@ -33,12 +34,12 @@ class Delete extends Component {
     const { licensePlate } = this.state
 
     return (
-        <div style={{textAlign: "center"}}>
-            <h3>Delete Registered Vehicle </h3>
+        <div style={{textAlign: "center", paddingLeft:"35%"}}>
+            <h3 style={{textAlign: "left"}}>Delete Registered Vehicle </h3>
 
-            <form onSubmit={this.submitHandler}>
+            <form style={{textAlign: "left"}} onSubmit={this.submitHandler}>
             License Plate Number: <input type="text" name="licensePlate" value={licensePlate} onChange={this.changeHandler}></input> <br/> <br/>
-            <button type="submit"> Delete Vehicle </button> { this.state.licensePlate=="done" ? <span> Vehicle Deleted Successfully! </span>: null}
+            <button type="submit"> Delete Vehicle </button> { this.state.licensePlate=="   " ? <span> Vehicle Deleted Successfully! </span>: null}
             </form>
         </div>
     )
