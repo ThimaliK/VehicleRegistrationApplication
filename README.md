@@ -18,4 +18,4 @@ Requirements
 - Java 8
 - Spring Framework
 
-Use an IDE (Ex: IntelliJ) to run ApiApp.java in the Backend directory (in package io.vehicleregistrationapp) after importing the Backend project.
+Use an IDE (Ex: IntelliJ) to run ApiApp.java in the Backend directory (in package io.vehiclesregistrationapp) after importing the Backend project.
