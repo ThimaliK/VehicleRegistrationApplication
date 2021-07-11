@@ -1,5 +1,7 @@
 ## VehicleRegistrationApplication
 
+Frontend - React, Backend - Spring Boot
+
 ### Running the Frontend
 
 Requirements
@@ -7,9 +9,7 @@ Requirements
 - NPM
 
 Move to the Frontend directory and run the following commands.
-- npm install axios
-- npm install --save react-router
-- npm install --save react-router-dom
+- npm install
 - npm start
 
 ### Running the Backend
